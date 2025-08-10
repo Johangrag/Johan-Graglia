@@ -46,7 +46,10 @@
       background-color: #007acc;
       padding: 10px 0;
       border-radius: 5px;
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      align-items: center;
     }
     nav a {
       color: white;
@@ -59,6 +62,17 @@
     nav a:hover {
       text-decoration: underline;
     }
+    /* Lien About Me en haut à droite */
+    nav a.about-me {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-style: italic;
+      font-size: 1em;
+      margin: 0;
+    }
+
     section.about {
       background: white;
       padding: 20px;
@@ -102,6 +116,7 @@
     <a data-section="talks">Talks</a>
     <a data-section="teaching">Teaching</a>
     <a data-section="projects">Projects</a>
+    <a class="about-me">About Me</a>
   </nav>
 
   <header>
@@ -148,30 +163,43 @@
   </section>
 
   <script>
-    // Récupérer tous les liens dans la nav
-    const navLinks = document.querySelectorAll('nav a');
-    // Récupérer toutes les sections avec contenu
+    const navLinks = document.querySelectorAll('nav a[data-section]');
+    const aboutLink = document.querySelector('nav a.about-me');
     const sections = document.querySelectorAll('section.content-section');
+    const aboutSection = document.querySelector('section.about');
 
+    // Affiche la section donnée et cache les autres
+    function showSection(sectionId) {
+      sections.forEach(sec => sec.style.display = 'none');
+      aboutSection.style.display = 'none';
+
+      if (sectionId === 'about') {
+        aboutSection.style.display = 'block';
+      } else {
+        const targetSection = document.getElementById(sectionId);
+        if (targetSection) targetSection.style.display = 'block';
+      }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Clic sur les rubriques
     navLinks.forEach(link => {
       link.addEventListener('click', () => {
         const target = link.getAttribute('data-section');
-
-        // Cacher toutes les sections
-        sections.forEach(sec => sec.style.display = 'none');
-        // Cacher la section "about"
-        document.querySelector('section.about').style.display = 'none';
-
-        // Afficher la section ciblée
-        const targetSection = document.getElementById(target);
-        if (targetSection) targetSection.style.display = 'block';
-
-        // Optionnel : faire défiler vers le haut du contenu
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        showSection(target);
       });
     });
+
+    // Clic sur About Me
+    aboutLink.addEventListener('click', () => {
+      showSection('about');
+    });
+
+    // Au chargement, afficher la section About
+    showSection('about');
   </script>
 
 </body>
 </html>
+
 
