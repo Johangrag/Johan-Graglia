@@ -103,6 +103,25 @@
       line-height: 1.6;
       color: #333;
     }
+    /* liste stylisée avec icône certificat */
+.pretty-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.pretty-list li {
+  position: relative;
+  padding-left: 30px; /* espace avant le texte */
+  margin-bottom: 12px; /* espace entre les lignes */
+}
+
+.pretty-list li::before {
+  content: "📜";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.2em; /* taille du symbole */
+}
 
     /* bouton CV */
     .cv-link {
