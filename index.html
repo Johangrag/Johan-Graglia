@@ -123,6 +123,18 @@
   font-size: 1.2em; /* taille du symbole */
 }
 
+    .icon-link {
+  margin-left: 10px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  vertical-align: middle;
+}
+
+.icon-link:hover {
+  text-decoration: underline;
+  color: #007acc;
+}
+
     /* bouton CV */
     .cv-link {
       display: inline-block;
@@ -166,13 +178,16 @@
     <a class="about-me">About Me</a>
   </nav>
 
-  <header>
-    <img src="images/photo-profil.jpg" alt="Photo de profil" />
-    <div>
-      <h1>Johan Graglia</h1>
-      <p class="title">PhD student LNCMI - Toulouse</p>
-    </div>
-  </header>
+<header>
+  <img src="images/photo-profil.jpg" alt="Photo de profil" />
+  <div>
+    <h1>Johan Graglia
+      <a href="https://www.linkedin.com/in/tonprofil" target="_blank" rel="noopener" aria-label="LinkedIn" class="icon-link">🔗</a>
+      <a href="mailto:ton.email@example.com" aria-label="Email" class="icon-link">📧</a>
+    </h1>
+    <p class="title">PhD student LNCMI - Toulouse</p>
+  </div>
+</header>
 
   <!-- ABOUT visible par défaut, avec sous-sections -->
   <section class="about" id="about">
