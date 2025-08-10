@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Me</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+      border-bottom: 2px solid #007acc;
+      padding-bottom: 10px;
+    }
+    header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 20px;
+      border: 3px solid #007acc;
+    }
+    header div {
+      flex-grow: 1;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+      color: #007acc;
+    }
+    header p.title {
+      margin: 5px 0 0 0;
+      font-style: italic;
+      color: #555;
+    }
+    nav {
+      margin-bottom: 30px;
+      background-color: #007acc;
+      padding: 10px 0;
+      border-radius: 5px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section.about {
+      background: white;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    section.about p {
+      line-height: 1.5em;
+    }
+    section.about a.cv-link {
+      display: inline-block;
+      margin-top: 15px;
+      background-color: #007acc;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section.about a.cv-link:hover {
+      background-color: #005fa3;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#research">Research</a>
+    <a href="#publications">Publications</a>
+    <a href="#talks">Talks</a>
+    <a href="#teaching">Teaching</a>
+    <a href="#projects">Projects</a>
+  </nav>
+
+  <header>
+    <img src="images/photo-profil.jpg" alt="Photo de profil" />
+    <div>
+      <h1>Johan Graglia</h1>
+      <p class="title">PhD student LNCMI - Toulouse</p>
+    </div>
+  </header>
+
+  <section class="about">
+    <p>
+      salut
+    </p>
+    <a href="docs/cv.pdf" target="_blank" class="cv-link">Télécharger mon CV (PDF)</a>
+  </section>
+
+  <!-- Tu pourras ensuite créer des sections plus bas dans la page avec les id correspondants, par exemple : -->
+
+  <section id="research">
+    <h2>Research</h2>
+    <p>Contenu sur tes recherches ici...</p>
+  </section>
+
+  <section id="publications">
+    <h2>Publications</h2>
+    <p>Liste de publications, articles, etc.</p>
+  </section>
+
+  <section id="talks">
+    <h2>Talks</h2>
+    <p>Conférences, présentations, séminaires...</p>
+  </section>
+
+  <section id="teaching">
+    <h2>Teaching</h2>
+    <p>Expériences d’enseignement, tutoriels, etc.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <p>Descriptions de projets, collaborations, etc.</p>
+  </section>
+
+</body>
+</html>
