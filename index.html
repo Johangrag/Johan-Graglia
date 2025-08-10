@@ -4,109 +4,108 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About Me (site en construction) </title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 900px;
-      margin: auto;
-      padding: 20px;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-    header {
-      display: flex;
-      align-items: center;
-      margin-bottom: 30px;
-      border-bottom: 2px solid #007acc;
-      padding-bottom: 10px;
-    }
-    header img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-right: 20px;
-      border: 3px solid #007acc;
-    }
-    header div {
-      flex-grow: 1;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2em;
-      color: #007acc;
-    }
-    header p.title {
-      margin: 5px 0 0 0;
-      font-style: italic;
-      color: #555;
-    }
-    nav {
-      margin-bottom: 30px;
-      background-color: #007acc;
-      padding: 10px 0;
-      border-radius: 5px;
-      display: flex;
-      justify-content: center;
-      position: relative;
-      align-items: center;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-      font-size: 1.1em;
-      cursor: pointer;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    /* Lien About Me en haut à droite */
-    nav a.about-me {
-      position: absolute;
-      right: 20px;
-      top: 50%;
-      transform: translateY(-50%);
-      font-style: italic;
-      font-size: 1em;
-      margin: 0;
-    }
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+  }
 
-    section.about {
-      background: white;
-      padding: 20px;
-      border-radius: 5px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.1);
-      margin-bottom: 30px;
-    }
-    section.about p {
-      line-height: 1.5em;
-    }
-    section.about a.cv-link {
-      display: inline-block;
-      margin-top: 15px;
-      background-color: #007acc;
-      color: white;
-      padding: 10px 15px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section.about a.cv-link:hover {
-      background-color: #005fa3;
-    }
+  header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #007acc;
+    padding-bottom: 10px;
+  }
 
-    /* Les sections cachées */
-    section.content-section {
-      display: none;
-      background: white;
-      padding: 20px;
-      border-radius: 5px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.1);
-      margin-bottom: 30px;
-    }
-  </style>
+  header img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+    border: 3px solid #007acc;
+  }
+
+  header div {
+    flex-grow: 1;
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #007acc;
+  }
+
+  header p.title {
+    margin: 5px 0 0 0;
+    font-style: italic;
+    color: #555;
+  }
+
+  nav {
+    margin-bottom: 30px;
+    background-color: #007acc;
+    padding: 10px 0;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  section.about {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  }
+
+  /* Sous-sections "About Me" */
+  .subsection {
+    margin-bottom: 20px;
+  }
+
+  .subsection strong {
+    display: block;
+    font-size: 1.3em;
+    color: #007acc;
+    margin-bottom: 8px;
+  }
+
+  .about p {
+    margin: 0;
+    line-height: 1.5em;
+  }
+
+  section.about a.cv-link {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: #007acc;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  section.about a.cv-link:hover {
+    background-color: #005fa3;
+  }
+</style>
 </head>
 <body>
 
@@ -130,9 +129,12 @@
 <section class="about">
   <div class="subsection">
     <strong>About Me</strong>
-    <p>
-      I am a French physicist currently doing my PhD at the University of Paul Sabatier, at the LNCMI in Toulouse. My research mainly focuses on high-temperature superconductivity, an exciting area of quantum physics. While this is my main focus, I’m also interested in other fields of physics like cosmology and particle physics.
-    </p>
+ <p>
+    I am a French physicist currently doing my PhD at the University of Paul Sabatier, at the LNCMI in Toulouse. My research mainly focuses on high-temperature superconductivity, an exciting area of quantum physics. While this is my main focus, I’m also interested in other fields of physics like cosmology and particle physics.
+  </p>
+  <p>
+    I really enjoy teaching and sharing knowledge. On this site, I will share my various projects, mainly related to my thesis and quantum physics, but also those I worked on in cosmology and astrophysics during my studies.
+  </p>
   </div>
 
   <div class="subsection">
