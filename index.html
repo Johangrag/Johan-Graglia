@@ -122,17 +122,22 @@
   top: 0;
   font-size: 1.2em; /* taille du symbole */
 }
+    
+.contact-icons {
+  margin-top: 6px;
+}
 
-    .icon-link {
-  margin-left: 10px;
+.icon-link {
+  margin-right: 12px;
+  font-size: 1.5rem;
   text-decoration: none;
-  font-size: 1.2rem;
   vertical-align: middle;
+  color: #007acc;
 }
 
 .icon-link:hover {
   text-decoration: underline;
-  color: #007acc;
+  color: #005fa3;
 }
 
     /* bouton CV */
@@ -181,10 +186,11 @@
 <header>
   <img src="images/photo-profil.jpg" alt="Photo de profil" />
   <div>
-    <h1>Johan Graglia
+    <h1>Johan Graglia</h1>
+    <div class="contact-icons">
       <a href="https://www.linkedin.com/in/tonprofil" target="_blank" rel="noopener" aria-label="LinkedIn" class="icon-link">🔗</a>
       <a href="mailto:ton.email@example.com" aria-label="Email" class="icon-link">📧</a>
-    </h1>
+    </div>
     <p class="title">PhD student LNCMI - Toulouse</p>
   </div>
 </header>
