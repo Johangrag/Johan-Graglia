@@ -46,6 +46,7 @@
       background-color: #007acc;
       padding: 10px 0;
       border-radius: 5px;
+      text-align: center;
     }
     nav a {
       color: white;
@@ -53,6 +54,7 @@
       margin: 0 15px;
       font-weight: bold;
       font-size: 1.1em;
+      cursor: pointer;
     }
     nav a:hover {
       text-decoration: underline;
@@ -62,6 +64,7 @@
       padding: 20px;
       border-radius: 5px;
       box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
     }
     section.about p {
       line-height: 1.5em;
@@ -79,16 +82,26 @@
     section.about a.cv-link:hover {
       background-color: #005fa3;
     }
+
+    /* Les sections cachées */
+    section.content-section {
+      display: none;
+      background: white;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+    }
   </style>
 </head>
 <body>
 
   <nav>
-    <a href="#research">Research</a>
-    <a href="#publications">Publications</a>
-    <a href="#talks">Talks</a>
-    <a href="#teaching">Teaching</a>
-    <a href="#projects">Projects</a>
+    <a data-section="research">Research</a>
+    <a data-section="publications">Publications</a>
+    <a data-section="talks">Talks</a>
+    <a data-section="teaching">Teaching</a>
+    <a data-section="projects">Projects</a>
   </nav>
 
   <header>
@@ -99,41 +112,66 @@
     </div>
   </header>
 
- <section class="about"> 
-  <p>
-    I am a French physicist currently doing my PhD at the University of Paul Sabatier, at the LNCMI in Toulouse. My research mainly focuses on high-temperature superconductivity, an exciting area of quantum physics. While this is my main focus, I’m also interested in other fields of physics like cosmology and particle physics.
-  </p>
-  <p>
-    I really enjoy teaching and sharing knowledge. On this site, I will share my various projects, mainly related to my thesis and quantum physics, but also those I worked on in cosmology and astrophysics during my studies.
-  </p>
-  <a href="docs/cv.pdf" target="_blank" class="cv-link">Download my CV (PDF)</a>
-</section>
-  <!-- Tu pourras ensuite créer des sections plus bas dans la page avec les id correspondants, par exemple : -->
+  <section class="about">
+    <p>
+      I am a French physicist currently doing my PhD at the University of Paul Sabatier, at the LNCMI in Toulouse. My research mainly focuses on high-temperature superconductivity, an exciting area of quantum physics. While this is my main focus, I’m also interested in other fields of physics like cosmology and particle physics.
+    </p>
+    <p>
+      I really enjoy teaching and sharing knowledge. On this site, I will share my various projects, mainly related to my thesis and quantum physics, but also those I worked on in cosmology and astrophysics during my studies.
+    </p>
+    <a href="docs/cv.pdf" target="_blank" class="cv-link">Download my CV (PDF)</a>
+  </section>
 
-  <section id="research">
+  <section id="research" class="content-section">
     <h2>Research</h2>
     <p>Contenu sur tes recherches ici...</p>
   </section>
 
-  <section id="publications">
+  <section id="publications" class="content-section">
     <h2>Publications</h2>
     <p>Liste de publications, articles, etc.</p>
   </section>
 
-  <section id="talks">
+  <section id="talks" class="content-section">
     <h2>Talks</h2>
     <p>Conférences, présentations, séminaires...</p>
   </section>
 
-  <section id="teaching">
+  <section id="teaching" class="content-section">
     <h2>Teaching</h2>
     <p>Expériences d’enseignement, tutoriels, etc.</p>
   </section>
 
-  <section id="projects">
+  <section id="projects" class="content-section">
     <h2>Projects</h2>
     <p>Descriptions de projets, collaborations, etc.</p>
   </section>
 
+  <script>
+    // Récupérer tous les liens dans la nav
+    const navLinks = document.querySelectorAll('nav a');
+    // Récupérer toutes les sections avec contenu
+    const sections = document.querySelectorAll('section.content-section');
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        const target = link.getAttribute('data-section');
+
+        // Cacher toutes les sections
+        sections.forEach(sec => sec.style.display = 'none');
+        // Cacher la section "about"
+        document.querySelector('section.about').style.display = 'none';
+
+        // Afficher la section ciblée
+        const targetSection = document.getElementById(target);
+        if (targetSection) targetSection.style.display = 'block';
+
+        // Optionnel : faire défiler vers le haut du contenu
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+  </script>
+
 </body>
 </html>
+
