@@ -1,120 +1,149 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About Me (site en construction) </title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    max-width: 900px;
-    margin: auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    color: #333;
-  }
+  <title>About Me (site en construction)</title>
+  <style>
+    /* Reset très simple */
+    *, *::before, *::after { box-sizing: border-box; }
 
-  header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 30px;
-    border-bottom: 2px solid #007acc;
-    padding-bottom: 10px;
-  }
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 24px auto;
+      padding: 20px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
 
-  header img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 20px;
-    border: 3px solid #007acc;
-  }
+    header {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 24px;
+      border-bottom: 2px solid #e6eef7;
+      padding-bottom: 12px;
+    }
+    header img {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #007acc;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      color: #007acc;
+    }
+    header p.title {
+      margin: 6px 0 0;
+      color: #555;
+      font-style: italic;
+    }
 
-  header div {
-    flex-grow: 1;
-  }
+    /* navigation */
+    nav {
+      margin-bottom: 20px;
+      background-color: #007acc;
+      padding: 10px 16px;
+      border-radius: 6px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative; /* pour placer About Me à droite */
+    }
+    nav a.tab {
+      color: white;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    nav a.tab:hover { text-decoration: underline; }
 
-  header h1 {
-    margin: 0;
-    font-size: 2em;
-    color: #007acc;
-  }
+    nav a.about-me {
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-style: italic;
+      font-weight: 600;
+      color: white;
+    }
 
-  header p.title {
-    margin: 5px 0 0 0;
-    font-style: italic;
-    color: #555;
-  }
+    /* About principal */
+    section.about {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+      margin-bottom: 24px;
+    }
 
-  nav {
-    margin-bottom: 30px;
-    background-color: #007acc;
-    padding: 10px 0;
-    border-radius: 5px;
-    text-align: center;
-  }
+    /* sous-sections */
+    .subsection {
+      margin-bottom: 18px;
+      padding: 12px;
+      border-radius: 6px;
+      background: #fbfdff; /* léger fond pour mieux séparer */
+      border: 1px solid #eef6fb;
+    }
+    .subsection-title {
+      display:block;
+      font-size: 1.15rem;
+      color: #007acc;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .subsection p {
+      margin: 0 0 8px 0;
+      line-height: 1.6;
+      color: #333;
+    }
 
-  nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-    font-size: 1.1em;
-  }
+    /* bouton CV */
+    .cv-link {
+      display: inline-block;
+      margin-top: 6px;
+      background-color: #007acc;
+      color: white;
+      padding: 10px 14px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .cv-link:hover { background-color: #005fa3; }
 
-  nav a:hover {
-    text-decoration: underline;
-  }
+    /* sections cachées (Research, etc.) */
+    section.content-section {
+      display: none;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+      margin-bottom: 24px;
+    }
 
-  section.about {
-    background: white;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 8px rgba(0,0,0,0.1);
-  }
-
-  /* Sous-sections "About Me" */
-  .subsection {
-    margin-bottom: 20px;
-  }
-
-  .subsection strong {
-    display: block;
-    font-size: 1.3em;
-    color: #007acc;
-    margin-bottom: 8px;
-  }
-
-  .about p {
-    margin: 0;
-    line-height: 1.5em;
-  }
-
-  section.about a.cv-link {
-    display: inline-block;
-    margin-top: 15px;
-    background-color: #007acc;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-  }
-
-  section.about a.cv-link:hover {
-    background-color: #005fa3;
-  }
-</style>
+    /* responsive */
+    @media (max-width: 600px) {
+      header { flex-direction: column; align-items: flex-start; gap: 12px; }
+      nav { padding: 8px; }
+      nav a { margin: 0 8px; font-size: 0.95rem; }
+      nav a.about-me { right: 10px; }
+    }
+  </style>
 </head>
 <body>
 
   <nav>
-    <a data-section="research">Research</a>
-    <a data-section="publications">Publications</a>
-    <a data-section="talks">Talks</a>
-    <a data-section="teaching">Teaching</a>
-    <a data-section="projects">Projects</a>
+    <a class="tab" data-section="research">Research</a>
+    <a class="tab" data-section="publications">Publications</a>
+    <a class="tab" data-section="talks">Talks</a>
+    <a class="tab" data-section="teaching">Teaching</a>
+    <a class="tab" data-section="projects">Projects</a>
     <a class="about-me">About Me</a>
   </nav>
 
@@ -126,27 +155,33 @@
     </div>
   </header>
 
-<section class="about">
-  <div class="subsection">
-    <strong>About Me</strong>
- <p>
-    I am a French physicist currently doing my PhD at the University of Paul Sabatier, at the LNCMI in Toulouse. My research mainly focuses on high-temperature superconductivity, an exciting area of quantum physics. While this is my main focus, I’m also interested in other fields of physics like cosmology and particle physics.
-  </p>
-  <p>
-    I really enjoy teaching and sharing knowledge. On this site, I will share my various projects, mainly related to my thesis and quantum physics, but also those I worked on in cosmology and astrophysics during my studies.
-  </p>
-  </div>
+  <!-- ABOUT visible par défaut, avec sous-sections -->
+  <section class="about" id="about">
+    <div class="subsection">
+      <span class="subsection-title">About Me</span>
+      <p>
+        I am a French physicist currently doing my PhD at the University of Paul Sabatier, at the LNCMI in Toulouse.
+        My research mainly focuses on high-temperature superconductivity — an exciting area of quantum physics.
+      </p>
+      <p>
+        I’m also interested in cosmology and particle physics, and I enjoy teaching and science outreach.
+      </p>
+    </div>
 
-  <div class="subsection">
-    <strong>My Background</strong>
-    <p>
-prout
-    </p>
-  </div>
+    <div class="subsection">
+      <span class="subsection-title">Mon parcours</span>
+      <p>
+        Après un master en physique fondamentale, j'ai rejoint le LNCMI pour ma thèse. J'ai travaillé sur des techniques expérimentales et l'analyse de données.
+      </p>
+      <p>
+        (Remplace ce paragraphe par ton texte détaillé.)
+      </p>
+    </div>
 
-  <a href="docs/cv.pdf" target="_blank" class="cv-link">Download my CV (PDF)</a>
-</section>
+    <a href="docs/cv.pdf" target="_blank" class="cv-link">Télécharger mon CV (PDF)</a>
+  </section>
 
+  <!-- sections cachées qui s'affichent au clic -->
   <section id="research" class="content-section">
     <h2>Research</h2>
     <p>Contenu sur tes recherches ici...</p>
@@ -173,43 +208,42 @@ prout
   </section>
 
   <script>
-    const navLinks = document.querySelectorAll('nav a[data-section]');
+    const tabs = document.querySelectorAll('nav a.tab');
     const aboutLink = document.querySelector('nav a.about-me');
-    const sections = document.querySelectorAll('section.content-section');
-    const aboutSection = document.querySelector('section.about');
+    const aboutSection = document.getElementById('about');
+    const contentSections = document.querySelectorAll('section.content-section');
 
-    // Affiche la section donnée et cache les autres
-    function showSection(sectionId) {
-      sections.forEach(sec => sec.style.display = 'none');
+    function showSection(id) {
+      // cacher tout
+      contentSections.forEach(s => s.style.display = 'none');
       aboutSection.style.display = 'none';
 
-      if (sectionId === 'about') {
+      if (id === 'about') {
         aboutSection.style.display = 'block';
       } else {
-        const targetSection = document.getElementById(sectionId);
-        if (targetSection) targetSection.style.display = 'block';
+        const el = document.getElementById(id);
+        if (el) el.style.display = 'block';
       }
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // Clic sur les rubriques
-    navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        const target = link.getAttribute('data-section');
+    // clics sur onglets
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const target = tab.getAttribute('data-section');
         showSection(target);
       });
     });
 
-    // Clic sur About Me
-    aboutLink.addEventListener('click', () => {
-      showSection('about');
-    });
+    // clic sur About Me (à droite)
+    aboutLink.addEventListener('click', () => showSection('about'));
 
-    // Au chargement, afficher la section About
+    // affichage initial : about visible
     showSection('about');
   </script>
 
 </body>
 </html>
+
 
 
