@@ -221,89 +221,105 @@
   </section>
 
   <!-- sections cachées qui s'affichent au clic -->
-<section id="research" class="content-section">
-  <h2>Mes Recherches</h2>
+ <section>
+    <h2>Mes recherches</h2>
+    <p>
+      La supraconductivité est un phénomène quantique où certains matériaux, lorsqu’ils sont refroidis, conduisent l’électricité sans aucune résistance. Cela permet de créer des champs magnétiques très puissants et stables, sans perte d’énergie. Cette propriété repose sur la formation de paires d’électrons appelées « paires de Cooper » qui se déplacent de manière cohérente à travers le matériau.
+    </p>
+    <p>
+      Lorsqu’un supraconducteur est soumis à un fort champ magnétique, des tubes de flux magnétique appelés vortex pénètrent dans le matériau. Ces vortex, porteurs d’un quantum de flux, peuvent se déplacer sous l’effet d’un courant, provoquant de la dissipation et donc la perte de supraconductivité. Pour éviter cela, il est crucial que ces vortex soient « piégés » par des défauts nanométriques présents dans le matériau, qui agissent comme des ancrages empêchant leur mouvement. Mon travail consiste à comprendre comment la nature et la distribution de ces défauts influencent la capacité des rubans supraconducteurs à supporter de très forts courants dans des champs magnétiques extrêmes, jusqu’à 60 teslas.
+    </p>
+    <p>
+      Envie d’en savoir plus ? Je vous invite à cliquer
+      <a href="#research">ici</a>
+      pour approfondir les concepts clés de la supraconductivité, des vortex magnétiques et des mécanismes de piégeage, ainsi que leurs applications dans des technologies de pointe.
+    </p>
+  </section>
 
-  <div class="section-block">
-    <h3>1. Introduction aux supraconducteurs</h3>
-    <p>Présentation générale de la supraconductivité, ses propriétés clés, et les théories classiques qui en expliquent le fonctionnement.</p>
-    <button onclick="toggleContent('intro-details')">Voir plus</button>
-    <div id="intro-details" style="display:none; margin-top:10px;">
-      <ul>
-        <li>1.1 Qu'est-ce que la supraconductivité ?  
-          <ul>
-            <li>Définition simple et historique</li>
-            <li>Propriétés clés : résistivité nulle, effet Meissner</li>
-          </ul>
-        </li>
-        <li>1.2 Théories classiques de la supraconductivité  
-          <ul>
-            <li>Ginzburg-Landau (description macroscopique)</li>
-            <li>BCS (théorie microscopique) : paires de Cooper, gap supraconducteur</li>
-          </ul>
-        </li>
-        <li>1.3 Limites des théories classiques et apparition des HTS</li>
-      </ul>
+  <!-- Section détaillée avec plan et contenu -->
+  <section id="research" class="content-section">
+    <h2>Mes Recherches - Détails</h2>
+
+    <div class="section-block">
+      <h3>1. Introduction aux supraconducteurs</h3>
+      <p>Présentation générale de la supraconductivité, ses propriétés clés, et les théories classiques qui en expliquent le fonctionnement.</p>
+      <button onclick="toggleContent('intro-details')">Voir plus</button>
+      <div id="intro-details" style="display:none; margin-top:10px;">
+        <ul>
+          <li>1.1 Qu'est-ce que la supraconductivité ?  
+            <ul>
+              <li>Définition simple et historique</li>
+              <li>Propriétés clés : résistivité nulle, effet Meissner</li>
+            </ul>
+          </li>
+          <li>1.2 Théories classiques de la supraconductivité  
+            <ul>
+              <li>Ginzburg-Landau (description macroscopique)</li>
+              <li>BCS (théorie microscopique) : paires de Cooper, gap supraconducteur</li>
+            </ul>
+          </li>
+          <li>1.3 Limites des théories classiques et apparition des HTS</li>
+        </ul>
+      </div>
     </div>
-  </div>
 
-  <div class="section-block">
-    <h3>2. Supraconducteurs à haute température critique (HTS)</h3>
-    <p>Découverte des supraconducteurs HTS, leurs particularités, et les différences avec les supraconducteurs conventionnels.</p>
-    <button onclick="toggleContent('hts-details')">Voir plus</button>
-    <div id="hts-details" style="display:none; margin-top:10px;">
-      <ul>
-        <li>2.1 Présentation des HTS : différences avec les supraconducteurs classiques, exemple YBCO</li>
-        <li>2.2 Particularités physiques des HTS : structure cristalline, couplage non conventionnel</li>
-        <li>2.3 Supraconductivité non conventionnelle : physique des vortex, interaction vortex/défauts</li>
-      </ul>
+    <div class="section-block">
+      <h3>2. Supraconducteurs à haute température critique (HTS)</h3>
+      <p>Découverte des supraconducteurs HTS, leurs particularités, et les différences avec les supraconducteurs conventionnels.</p>
+      <button onclick="toggleContent('hts-details')">Voir plus</button>
+      <div id="hts-details" style="display:none; margin-top:10px;">
+        <ul>
+          <li>2.1 Présentation des HTS : différences avec les supraconducteurs classiques, exemple YBCO</li>
+          <li>2.2 Particularités physiques des HTS : structure cristalline, couplage non conventionnel</li>
+          <li>2.3 Supraconductivité non conventionnelle : physique des vortex, interaction vortex/défauts</li>
+        </ul>
+      </div>
     </div>
-  </div>
 
-  <div class="section-block">
-    <h3>3. Nanostructure et transport électrique dans les rubans HTS</h3>
-    <p>Rôle essentiel de la nanostructure sur le transport électrique et le courant critique dans les rubans HTS.</p>
-    <button onclick="toggleContent('nano-details')">Voir plus</button>
-    <div id="nano-details" style="display:none; margin-top:10px;">
-      <ul>
-        <li>3.1 Importance de la nanostructure dans le comportement supraconducteur</li>
-        <li>3.2 Courant critique (Jc) : définition et mécanismes limitants</li>
-        <li>3.3 Techniques d’étude du transport électrique : mesure en champ magnétique pulsé</li>
-      </ul>
+    <div class="section-block">
+      <h3>3. Nanostructure et transport électrique dans les rubans HTS</h3>
+      <p>Rôle essentiel de la nanostructure sur le transport électrique et le courant critique dans les rubans HTS.</p>
+      <button onclick="toggleContent('nano-details')">Voir plus</button>
+      <div id="nano-details" style="display:none; margin-top:10px;">
+        <ul>
+          <li>3.1 Importance de la nanostructure dans le comportement supraconducteur</li>
+          <li>3.2 Courant critique (Jc) : définition et mécanismes limitants</li>
+          <li>3.3 Techniques d’étude du transport électrique : mesure en champ magnétique pulsé</li>
+        </ul>
+      </div>
     </div>
-  </div>
 
-  <div class="section-block">
-    <h3>4. Travail expérimental au LNCMI Toulouse</h3>
-    <p>Présentation des méthodes expérimentales et du laboratoire où les mesures en champ magnétique pulsé sont réalisées.</p>
-    <button onclick="toggleContent('lncmi-details')">Voir plus</button>
-    <div id="lncmi-details" style="display:none; margin-top:10px;">
-      <ul>
-        <li>4.1 Présentation du LNCMI</li>
-        <li>4.2 Méthodologie expérimentale : préparation des échantillons, mesures sous champ pulsé</li>
-        <li>4.3 Résultats et interprétation : influence des défauts, comparaison aux modèles</li>
-      </ul>
+    <div class="section-block">
+      <h3>4. Travail expérimental au LNCMI Toulouse</h3>
+      <p>Présentation des méthodes expérimentales et du laboratoire où les mesures en champ magnétique pulsé sont réalisées.</p>
+      <button onclick="toggleContent('lncmi-details')">Voir plus</button>
+      <div id="lncmi-details" style="display:none; margin-top:10px;">
+        <ul>
+          <li>4.1 Présentation du LNCMI</li>
+          <li>4.2 Méthodologie expérimentale : préparation des échantillons, mesures sous champ pulsé</li>
+          <li>4.3 Résultats et interprétation : influence des défauts, comparaison aux modèles</li>
+        </ul>
+      </div>
     </div>
-  </div>
 
-  <div class="section-block">
-    <h3>5. Applications et perspectives</h3>
-    <p>Applications actuelles des rubans HTS et les défis futurs pour améliorer leurs performances.</p>
-    <button onclick="toggleContent('apps-details')">Voir plus</button>
-    <div id="apps-details" style="display:none; margin-top:10px;">
-      <ul>
-        <li>5.1 Applications des rubans HTS : câbles, aimants, stockage d’énergie</li>
-        <li>5.2 Enjeux pour la recherche : optimisation des nanostructures et de la physique des vortex</li>
-        <li>5.3 Projets futurs et collaborations</li>
-      </ul>
+    <div class="section-block">
+      <h3>5. Applications et perspectives</h3>
+      <p>Applications actuelles des rubans HTS et les défis futurs pour améliorer leurs performances.</p>
+      <button onclick="toggleContent('apps-details')">Voir plus</button>
+      <div id="apps-details" style="display:none; margin-top:10px;">
+        <ul>
+          <li>5.1 Applications des rubans HTS : câbles, aimants, stockage d’énergie</li>
+          <li>5.2 Enjeux pour la recherche : optimisation des nanostructures et de la physique des vortex</li>
+          <li>5.3 Projets futurs et collaborations</li>
+        </ul>
+      </div>
     </div>
-  </div>
 
-  <div class="section-block">
-    <h3>6. Conclusion</h3>
-    <p>Résumé des points clés et invitation à suivre les avancées dans la recherche sur les supraconducteurs HTS.</p>
-  </div>
-</section>
+    <div class="section-block">
+      <h3>6. Conclusion</h3>
+      <p>Résumé des points clés et invitation à suivre les avancées dans la recherche sur les supraconducteurs HTS.</p>
+    </div>
+  </section>
 
 
 
