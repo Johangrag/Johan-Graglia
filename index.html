@@ -231,14 +231,15 @@
     </p>
     <p>
       Envie d’en savoir plus ? Je vous invite à cliquer
-      <a href="#research">ici</a>
+      <a href="#" onclick="showDetails(); return false;">ici</a>
       pour approfondir les concepts clés de la supraconductivité, des vortex magnétiques et des mécanismes de piégeage, ainsi que leurs applications dans des technologies de pointe.
     </p>
   </section>
 
   <!-- Section détaillée avec plan et contenu -->
-  <section id="research-details" class="content-section">
+  <section id="research-details" class="content-section" style="display:none;">
     <h2>Mes Recherches - Détails</h2>
+     <button onclick="showResearchSummary()">Retour au résumé</button>
 
     <div class="section-block">
       <h3>1. Introduction aux supraconducteurs</h3>
@@ -404,6 +405,18 @@
       elem.style.display = 'none';
     }
   }
+
+    function showDetails() {
+  document.getElementById('research').style.display = 'none';
+  document.getElementById('research-details').style.display = 'block';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function showResearchSummary() {
+  document.getElementById('research').style.display = 'block';
+  document.getElementById('research-details').style.display = 'none';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
   </script>
 
 </body>
