@@ -339,10 +339,45 @@
     <p>Expériences d’enseignement, tutoriels, etc.</p>
   </section>
 
-  <section id="projects" class="content-section">
-    <h2>Projects</h2>
-    <p>Descriptions de projets, collaborations, etc.</p>
-  </section>
+
+  
+<section id="projects" class="content-section">
+  <h2>Projects</h2>
+
+  <div class="project">
+    <h3><strong>Stage de M2 en Cosmologie</strong></h3>
+    <p>
+      Étude des propriétés d’un modèle cosmologique à grande échelle...
+    </p>
+    <p>
+      <a href="#" onclick="showProjectDetails('cosmo'); return false;">En savoir plus</a>
+    </p>
+  </div>
+
+  <div class="project">
+    <h3><strong>Projet Numérique</strong></h3>
+    <p>
+      Développement d’un outil interactif pour traiter et visualiser des données...
+    </p>
+    <p>
+      <a href="#" onclick="showProjectDetails('numerique'); return false;">En savoir plus</a>
+    </p>
+  </div>
+</section>
+
+<!-- Détails cachés -->
+<section id="cosmo-details" class="project-details">
+  <h2>Détails – Stage de M2 en Cosmologie</h2>
+  <p>Explication complète, images, graphiques, etc.</p>
+  <a href="#" class="back-link" onclick="showProjectsList(); return false;">← Retour aux projets</a>
+</section>
+
+<section id="numerique-details" class="project-details">
+  <h2>Détails – Projet Numérique</h2>
+  <p>Description détaillée, captures d’écran, code, etc.</p>
+  <a href="#" class="back-link" onclick="showProjectsList(); return false;">← Retour aux projets</a>
+</section>
+
 
 
 
@@ -416,6 +451,17 @@ function showResearchSummary() {
   document.getElementById('research').style.display = 'block';
   document.getElementById('research-details').style.display = 'none';
   window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+    function showProjectDetails(project) {
+  document.getElementById('projects').style.display = 'none';
+  document.querySelectorAll('.project-details').forEach(el => el.style.display = 'none');
+  document.getElementById(project + '-details').style.display = 'block';
+}
+
+function showProjectsList() {
+  document.querySelectorAll('.project-details').forEach(el => el.style.display = 'none');
+  document.getElementById('projects').style.display = 'block';
 }
   </script>
 
