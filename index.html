@@ -153,6 +153,10 @@
       nav a { margin: 0 8px; font-size: 0.95rem; }
       nav a.about-me { right: 10px; }
     }
+
+    .project-details {
+  display: none;
+}
   </style>
 </head>
 <body>
@@ -518,15 +522,33 @@ function showResearchSummary() {
 }
 
 function showProjectDetails(project) {
+  // Masquer la liste des projets
   document.getElementById('projects').style.display = 'none';
-  document.querySelectorAll('.project-details').forEach(el => el.style.display = 'none');
-  document.getElementById(project + '-details').style.display = 'block';
+
+  // Masquer toutes les autres sections détaillées
+  document.querySelectorAll('.project-details').forEach(el => {
+    el.style.display = 'none';
+  });
+
+  // Afficher uniquement la fiche du projet demandé
+  const detailsSection = document.getElementById(project + '-details');
+  if (detailsSection) {
+    detailsSection.style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 }
 
 function showProjectsList() {
-  document.querySelectorAll('.project-details').forEach(el => el.style.display = 'none');
+  // Masquer toutes les fiches détaillées
+  document.querySelectorAll('.project-details').forEach(el => {
+    el.style.display = 'none';
+  });
+
+  // Réafficher la liste des projets
   document.getElementById('projects').style.display = 'block';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
   </script>
 
 </body>
