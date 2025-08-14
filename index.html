@@ -514,7 +514,7 @@ function showResearchSummary() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-    function showProjectDetails(project) {
+function showProjectDetails(project) {
   document.getElementById('projects').style.display = 'none';
   document.querySelectorAll('.project-details').forEach(el => el.style.display = 'none');
   document.getElementById(project + '-details').style.display = 'block';
