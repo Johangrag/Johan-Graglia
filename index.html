@@ -226,18 +226,15 @@
 
   <!-- sections cachées qui s'affichent au clic -->
   <section id="research" class="content-section">
-    <h2>Mes recherches</h2>
+    <h2>My Research</h2>
     <p>
-      La supraconductivité est un phénomène quantique où certains matériaux, lorsqu’ils sont refroidis, conduisent l’électricité sans aucune résistance. Cela permet de créer des champs magnétiques très puissants et stables, sans perte d’énergie. Cette propriété repose sur la formation de paires d’électrons appelées « paires de Cooper » qui se déplacent de manière cohérente à travers le matériau.
-    </p>
+Superconductivity is a quantum phenomenon in which certain materials, when cooled, conduct electricity without any resistance. This allows the creation of very strong and stable magnetic fields without energy loss. This property relies on the formation of electron pairs called “Cooper pairs” that move coherently through the material.    </p>
     <p>
-      Lorsqu’un supraconducteur est soumis à un fort champ magnétique, des tubes de flux magnétique appelés vortex pénètrent dans le matériau. Ces vortex, porteurs d’un quantum de flux, peuvent se déplacer sous l’effet d’un courant, provoquant de la dissipation et donc la perte de supraconductivité. Pour éviter cela, il est crucial que ces vortex soient « piégés » par des défauts nanométriques présents dans le matériau, qui agissent comme des ancrages empêchant leur mouvement. Mon travail consiste à comprendre comment la nature et la distribution de ces défauts influencent la capacité des rubans supraconducteurs à supporter de très forts courants dans des champs magnétiques extrêmes, jusqu’à 60 teslas.
-    </p>
+When a superconductor is subjected to a strong magnetic field, magnetic flux tubes called vortices penetrate the material. These vortices, each carrying a quantum of flux, can move under the effect of a current, causing dissipation and thus the loss of superconductivity. To prevent this, it is crucial that these vortices be “pinned” by nanometric defects in the material, which act as anchors to inhibit their motion. My work focuses on understanding how the nature and distribution of these defects influence the ability of superconducting tapes to carry very high currents under extreme magnetic fields, up to 60 teslas.    </p>
     <p>
-      Envie d’en savoir plus ? Je vous invite à cliquer
+Want to learn more? I invite you to click
       <a href="#" onclick="showDetails(); return false;">ici</a>
-      pour approfondir les concepts clés de la supraconductivité, des vortex magnétiques et des mécanismes de piégeage, ainsi que leurs applications dans des technologies de pointe.
-    </p>
+To deepen the understanding of key concepts in superconductivity, magnetic vortices, and pinning mechanisms, as well as their applications in technologies.    </p>
   </section>
 
   <!-- Section détaillée avec plan et contenu -->
@@ -295,33 +292,63 @@
     </div>
 
     <div class="section-block">
-      <h3>4. Travail expérimental au LNCMI Toulouse</h3>
+      <h3>4. Simulations macro et méso dans les HTS</h3>
+      <p>Présentation des outils numériques utilisés pour modéliser le comportement des supraconducteurs à différentes échelles.</p>
+      <button onclick="toggleContent('simu-details')">Voir plus</button>
+      <div id="simu-details" style="display:none; margin-top:10px;">
+        <ul>
+          <li>4.1 Simulations macroscopiques avec MIPSE
+            <ul>
+              <li>Présentation de MIPSE (Multi-scale Integrated Physical Simulation Environment)</li>
+              <li>Objectifs : modélisation du comportement global des rubans HTS, distribution du courant et champs magnétiques</li>
+            </ul>
+          </li>
+          <li>3bis.2 Simulations méso avec tdGL (time-dependent Ginzburg-Landau)
+            <ul>
+              <li>Principe : résolution numérique de l’équation Ginzburg-Landau dépendante du temps</li>
+              <li>Échelle : dynamique des vortex et interaction avec les défauts de la nanostructure</li>
+              <li>Résultats typiques : trajectoire des vortex, influence des défauts et architecture du ruban</li>
+              <li>Résultats typiques : courbes de Jc en fonction du champ, dynamique des vortex à grande échelle</li>
+            </ul>
+          </li>
+          <li>4.3 Comparaison avec l’expérience
+            <ul>
+              <li>Validation des modèles par les mesures expérimentales (champ pulsé, Jc)</li>
+              <li>Discussion sur limites et avantages de chaque approche</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <h3>5. Travail expérimental au LNCMI Toulouse</h3>
       <p>Présentation des méthodes expérimentales et du laboratoire où les mesures en champ magnétique pulsé sont réalisées.</p>
       <button onclick="toggleContent('lncmi-details')">Voir plus</button>
       <div id="lncmi-details" style="display:none; margin-top:10px;">
         <ul>
-          <li>4.1 Présentation du LNCMI</li>
-          <li>4.2 Méthodologie expérimentale : préparation des échantillons, mesures sous champ pulsé</li>
-          <li>4.3 Résultats et interprétation : influence des défauts, comparaison aux modèles</li>
+          <li>5.1 Présentation du LNCMI</li>
+          <li>5.2 Méthodologie expérimentale : préparation des échantillons, mesures sous champ pulsé</li>
+          <li>5.3 Résultats et interprétation : influence des défauts, comparaison aux modèles</li>
         </ul>
       </div>
     </div>
 
     <div class="section-block">
-      <h3>5. Applications et perspectives</h3>
+      <h3>6. Applications et perspectives</h3>
       <p>Applications actuelles des rubans HTS et les défis futurs pour améliorer leurs performances.</p>
       <button onclick="toggleContent('apps-details')">Voir plus</button>
       <div id="apps-details" style="display:none; margin-top:10px;">
         <ul>
-          <li>5.1 Applications des rubans HTS : câbles, aimants, stockage d’énergie</li>
-          <li>5.2 Enjeux pour la recherche : optimisation des nanostructures et de la physique des vortex</li>
-          <li>5.3 Projets futurs et collaborations</li>
+          <li>6.1 Applications des rubans HTS : câbles, aimants, stockage d’énergie</li>
+          <li>6.2 Enjeux pour la recherche : optimisation des nanostructures et de la physique des vortex</li>
+          <li>6.3 Projets futurs et collaborations</li>
         </ul>
       </div>
     </div>
 
     <div class="section-block">
-      <h3>6. Conclusion</h3>
+      <h3>7. Conclusion</h3>
       <p>Résumé des points clés et invitation à suivre les avancées dans la recherche sur les supraconducteurs HTS.</p>
     </div>
   </section>
